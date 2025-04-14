@@ -1,43 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    font-family: 'Poppins',sans-serif;
-    
-    /* if poppins not found fall back on sans - serif */
+    font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background-color: aqua;
     width: 100%;
-    height: 100VH;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg,#0a0a0a,#3a4452);
-    /* margin: 5% 0 5% 0; */
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
-.calculator{
-    
+.calculator {
     border: 2px solid #267b6e;
     padding: 25px;
     border-radius: 16px;
     background: transparent;
     box-shadow: 0px 5px 35px rgb(82, 86, 94);
-    
 }
-h1{
+
+h1 {
     color: #f7f6f6;
     text-align: center;
     margin-bottom: 5px;
     border-radius: 20px;
     background: transparent;
-    background: linear-gradient(45deg,#59877c,#3a4452);
+    background: linear-gradient(45deg, #59877c, #3a4452);
     height: auto;
     width: 320px;
 }
-input{
+
+input {
     margin-top: 5px;
     width: 320px;
     border: none;
@@ -51,11 +49,12 @@ input{
     cursor: pointer;
     color: #f0e9e9;
 }
-input::placeholder{
+
+input::placeholder {
     color: white;
 }
 
-button{
+button {
     border: none;
     height: 60px;
     width: 60px;
@@ -67,14 +66,72 @@ button{
     box-shadow: -8px -8px 15px rgba(5, 240, 240, 0.2);
     cursor: pointer;
 }
-.equal-btn{
+
+.equal-btn {
     background-color: #5adaad;
 }
-.operator{
+
+.operator {
     color: #19f8d6df;
 }
-footer{
+
+footer {
     color: #59877c;
     text-align: center;
     font-size: 12px;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, less than 600px) */
+@media screen and (max-width: 600px) {
+    h1, input {
+        width: 260px;
+        font-size: 30px;
+    }
+
+    .calculator {
+        padding: 20px;
+    }
+
+    button {
+        height: 50px;
+        width: 50px;
+        margin: 8px;
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (tablets, 600px - 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    h1, input {
+        width: 300px;
+        font-size: 36px;
+    }
+
+    .calculator {
+        padding: 25px;
+    }
+
+    button {
+        height: 55px;
+        width: 55px;
+        margin: 9px;
+        font-size: 19px;
+    }
+}
+
+/* Large devices (desktops and laptops, more than 900px) */
+@media screen and (min-width: 901px) {
+    h1, input {
+        width: 320px;
+        font-size: 40px;
+    }
+
+    button {
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+        font-size: 20px;
+    }
 }
